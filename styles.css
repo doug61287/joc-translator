@@ -166,6 +166,7 @@ body {
 .demo-dot.yellow { background: #f59e0b; }
 .demo-dot.green { background: #22c55e; }
 .demo-panel-title { margin-left: 8px; font-size: .75rem; color: var(--text2); font-weight: 500; text-transform: uppercase; letter-spacing: .05em; }
+.demo-badge { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; background: rgba(245, 158, 11, 0.15); color: var(--amber); font-size: .65rem; font-weight: 600; text-transform: none; letter-spacing: 0; border: 1px solid rgba(245, 158, 11, 0.3); }
 .demo-panel-body { padding: 20px; min-height: 220px; font-family: 'JetBrains Mono', monospace; font-size: .85rem; line-height: 1.7; color: var(--text2); }
 .demo-sow { display: inline; }
 .demo-cursor { display: inline; color: var(--accent); animation: blink 1s step-end infinite; }

@@ -36,11 +36,11 @@ const DEMO_SCENARIOS = [
     trade: 'Architectural',
     sow: `Remove existing VCT flooring and adhesive in Rooms 101-104. Install new 12×12 VCT in selected colors per finish schedule. Include 4" rubber base. Repair and paint drywall where damaged.`,
     items: [
-      { code: '02 41 19.19 0260', desc: 'Selective Demolition, Flooring, VCT Removal', qty: '2,400 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 96, source: 'Scope: "Remove existing VCT flooring"' },
-      { code: '09 65 13.33 0200', desc: 'Resilient Flooring, VCT, 12×12', qty: '2,400 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 94, source: 'Scope: "Install new 12×12 VCT"' },
-      { code: '09 65 13.33 1200', desc: 'Rubber Base, 4", Straight', qty: '480 LF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 91, source: 'Scope: "Include 4" rubber base"' },
-      { code: '09 21 16.43 0200', desc: 'Gypsum Board, 5/8", Tape and Finish', qty: '120 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 89, source: 'Scope: "Repair drywall where damaged"' },
-      { code: '09 90 00.10 0200', desc: 'Painting, Latex, 2 Coats', qty: '120 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 92, source: 'Scope: "paint drywall where damaged"' }
+      { code: '02 41 19.19 0260', desc: 'Selective Demolition, Flooring, VCT Removal', qty: '2,400 SF', multiplier: '1.10', multiplierNote: 'Occupied Facility - Dust Control', confidence: 96, source: 'Scope: "Remove existing VCT flooring"' },
+      { code: '09 65 13.33 0200', desc: 'Resilient Flooring, VCT, 12×12', qty: '2,400 SF', multiplier: '1.05', multiplierNote: 'After-Hours Installation', confidence: 94, source: 'Scope: "Install new 12×12 VCT"' },
+      { code: '09 65 13.33 1200', desc: 'Rubber Base, 4", Straight', qty: '480 LF', multiplier: '1.05', multiplierNote: 'After-Hours Installation', confidence: 91, source: 'Scope: "Include 4" rubber base"' },
+      { code: '09 21 16.43 0200', desc: 'Gypsum Board, 5/8", Tape and Finish', qty: '120 SF', multiplier: '1.25', multiplierNote: 'Patchwork / Small Quantity', confidence: 89, source: 'Scope: "Repair drywall where damaged"' },
+      { code: '09 90 00.10 0200', desc: 'Painting, Latex, 2 Coats', qty: '120 SF', multiplier: '1.20', multiplierNote: 'Match Existing Finish', confidence: 92, source: 'Scope: "paint drywall where damaged"' }
     ]
   },
   {
@@ -48,12 +48,12 @@ const DEMO_SCENARIOS = [
     trade: 'Plumbing',
     sow: `Renovate existing restroom R-205. Remove existing toilet, sink, and partitions. Install new ADA-compliant water closet with grab bars, new wall-hung lavatory with sensor faucet, and solid plastic toilet partitions. Provide new water supply stops and angle valves.`,
     items: [
-      { code: '02 41 19.13 0400', desc: 'Demolition, Plumbing Fixtures', qty: '3 EA', multiplier: '1.10', multiplierNote: 'Small Job Factor', confidence: 95, source: 'Scope: "Remove existing toilet, sink"' },
-      { code: '22 42 13.13 0200', desc: 'Water Closets, ADA, Floor-Mounted', qty: '1 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 96, source: 'Scope: "ADA-compliant water closet"' },
-      { code: '22 42 16.13 0200', desc: 'Lavatories, Wall-Hung', qty: '1 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 95, source: 'Scope: "wall-hung lavatory"' },
-      { code: '22 14 13.13 0200', desc: 'Faucets, Sensor, Battery Operated', qty: '1 EA', multiplier: '1.25', multiplierNote: 'Sensor + Small Job', confidence: 94, source: 'Scope: "sensor faucet"' },
-      { code: '10 28 13.13 0200', desc: 'Grab Bars, 1-1/4" Diameter', qty: '2 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 94, source: 'Scope: "with grab bars"' },
-      { code: '22 11 23.13 0200', desc: 'Angle Valves, Chrome', qty: '2 EA', multiplier: '1.10', multiplierNote: 'Small Job Factor', confidence: 93, source: 'Scope: "new water supply stops"' }
+      { code: '02 41 19.13 0400', desc: 'Demolition, Plumbing Fixtures', qty: '3 EA', multiplier: '1.15', multiplierNote: 'Working Hours Shutdown', confidence: 95, source: 'Scope: "Remove existing toilet, sink"' },
+      { code: '22 42 13.13 0200', desc: 'Water Closets, ADA, Floor-Mounted', qty: '1 EA', multiplier: '1.25', multiplierNote: 'ADA Compliant / Height Adjust', confidence: 96, source: 'Scope: "ADA-compliant water closet"' },
+      { code: '22 42 16.13 0200', desc: 'Lavatories, Wall-Hung', qty: '1 EA', multiplier: '1.30', multiplierNote: 'Wall-Hung / Carrier Install', confidence: 95, source: 'Scope: "wall-hung lavatory"' },
+      { code: '22 14 13.13 0200', desc: 'Faucets, Sensor, Battery Operated', qty: '1 EA', multiplier: '1.20', multiplierNote: 'Electronic / Battery Powered', confidence: 94, source: 'Scope: "sensor faucet"' },
+      { code: '10 28 13.13 0200', desc: 'Grab Bars, 1-1/4" Diameter', qty: '2 EA', multiplier: '1.15', multiplierNote: 'Blocking / Reinforcement Req', confidence: 94, source: 'Scope: "with grab bars"' },
+      { code: '22 11 23.13 0200', desc: 'Angle Valves, Chrome', qty: '2 EA', multiplier: '1.10', multiplierNote: 'Emergency Shut-Off Access', confidence: 93, source: 'Scope: "new water supply stops"' }
     ]
   },
   {
@@ -61,11 +61,11 @@ const DEMO_SCENARIOS = [
     trade: 'Electrical',
     sow: `Install new 20A duplex receptacles at 8 locations in Lab 302. Provide new 12 AWG THHN/THWN-2 in 3/4" EMT conduit from existing panel LP-3. Include GFCI protection where required per NEC. Install emergency lighting unit with battery backup near exit.`,
     items: [
-      { code: '26 05 33.16 0200', desc: 'Raceways, EMT, 3/4"', qty: '320 LF', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 93, source: 'Scope: "3/4" EMT conduit"' },
-      { code: '26 05 19.30 0600', desc: 'Wire, Copper, THHN, #12 AWG', qty: '960 LF', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 91, source: 'Scope: "12 AWG THHN" (3-wire circuit)' },
-      { code: '26 27 26.11 0200', desc: 'Receptacles, Duplex, 20A, 125V', qty: '8 EA', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 97, source: 'Scope: "20A duplex receptacles at 8 locations"' },
-      { code: '26 27 26.13 0200', desc: 'GFCI Receptacles, 20A', qty: '4 EA', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 88, source: 'NEC requirement near sinks' },
-      { code: '26 52 13.13 0200', desc: 'Emergency Lighting Unit, LED, Battery', qty: '1 EA', multiplier: '1.30', multiplierNote: 'Lab/Emergency Premium', confidence: 95, source: 'Scope: "emergency lighting unit with battery backup"' }
+      { code: '26 05 33.16 0200', desc: 'Raceways, EMT, 3/4"', qty: '320 LF', multiplier: '1.20', multiplierNote: 'Existing Building / Fishing', confidence: 93, source: 'Scope: "3/4" EMT conduit"' },
+      { code: '26 05 19.30 0600', desc: 'Wire, Copper, THHN, #12 AWG', qty: '960 LF', multiplier: '1.15', multiplierNote: '3-Wire Home Run Circuit', confidence: 91, source: 'Scope: "12 AWG THHN" (3-wire circuit)' },
+      { code: '26 27 26.11 0200', desc: 'Receptacles, Duplex, 20A, 125V', qty: '8 EA', multiplier: '1.10', multiplierNote: 'Multi-Gang Box Installation', confidence: 97, source: 'Scope: "20A duplex receptacles at 8 locations"' },
+      { code: '26 27 26.13 0200', desc: 'GFCI Receptacles, 20A', qty: '4 EA', multiplier: '1.15', multiplierNote: 'NEC 210.8 Compliance', confidence: 88, source: 'NEC requirement near sinks' },
+      { code: '26 52 13.13 0200', desc: 'Emergency Lighting Unit, LED, Battery', qty: '1 EA', multiplier: '1.25', multiplierNote: 'Generator Transfer / Testing', confidence: 95, source: 'Scope: "emergency lighting unit with battery backup"' }
     ]
   },
   {
@@ -73,12 +73,12 @@ const DEMO_SCENARIOS = [
     trade: 'Mechanical',
     sow: `Replace existing HVAC unit RTU-5 on roof with new 5-ton packaged rooftop unit with economizer and VFD. Provide new refrigerant piping with insulation. Connect to existing ductwork and electrical. Include new VAV boxes for zones 5A and 5B with DDC controls integration.`,
     items: [
-      { code: '23 07 13.13 0200', desc: 'Refrigerant Piping, Type L Copper, 3/4"', qty: '60 LF', multiplier: '1.35', multiplierNote: 'Rooftop + HVAC', confidence: 92, source: 'Scope: "new refrigerant piping"' },
-      { code: '23 07 16.13 0200', desc: 'Pipe Insulation, 1" Thick, Armaflex', qty: '60 LF', multiplier: '1.35', multiplierNote: 'Rooftop + HVAC', confidence: 90, source: 'Scope: "with insulation"' },
-      { code: '23 33 00.13 0200', desc: 'Air Handling Unit, Rooftop, 5 Ton', qty: '1 EA', multiplier: '1.40', multiplierNote: 'RTU + Economizer', confidence: 96, source: 'Scope: "5-ton packaged rooftop unit"' },
-      { code: '23 33 00.50 0200', desc: 'Economizer, Differential Enthalpy', qty: '1 EA', multiplier: '1.35', multiplierNote: 'RTU + Economizer', confidence: 94, source: 'Scope: "with economizer"' },
-      { code: '23 36 00.13 0200', desc: 'VAV Box, 400 CFM, with Reheat', qty: '2 EA', multiplier: '1.25', multiplierNote: 'DDC Integration', confidence: 93, source: 'Scope: "VAV boxes for zones 5A and 5B"' },
-      { code: '25 10 00.13 0200', desc: 'DDC Controller, VAV Zone', qty: '2 EA', multiplier: '1.30', multiplierNote: 'DDC Integration', confidence: 91, source: 'Scope: "with DDC controls integration"' }
+      { code: '23 07 13.13 0200', desc: 'Refrigerant Piping, Type L Copper, 3/4"', qty: '60 LF', multiplier: '1.30', multiplierNote: 'Rooftop / Crane Access', confidence: 92, source: 'Scope: "new refrigerant piping"' },
+      { code: '23 07 16.13 0200', desc: 'Pipe Insulation, 1" Thick, Armaflex', qty: '60 LF', multiplier: '1.25', multiplierNote: 'Outdoor / Weatherproof', confidence: 90, source: 'Scope: "with insulation"' },
+      { code: '23 33 00.13 0200', desc: 'Air Handling Unit, Rooftop, 5 Ton', qty: '1 EA', multiplier: '1.45', multiplierNote: 'Rigging / Crane / Curb Adapt', confidence: 96, source: 'Scope: "5-ton packaged rooftop unit"' },
+      { code: '23 33 00.50 0200', desc: 'Economizer, Differential Enthalpy', qty: '1 EA', multiplier: '1.20', multiplierNote: 'Controls Integration', confidence: 94, source: 'Scope: "with economizer"' },
+      { code: '23 36 00.13 0200', desc: 'VAV Box, 400 CFM, with Reheat', qty: '2 EA', multiplier: '1.35', multiplierNote: 'Existing Duct Modifications', confidence: 93, source: 'Scope: "VAV boxes for zones 5A and 5B"' },
+      { code: '25 10 00.13 0200', desc: 'DDC Controller, VAV Zone', qty: '2 EA', multiplier: '1.40', multiplierNote: 'BMS Integration / Programming', confidence: 91, source: 'Scope: "with DDC controls integration"' }
     ]
   }
 ];

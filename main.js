@@ -35,30 +35,30 @@ const DEMO_SCENARIOS = [
     name: 'Flooring Replacement',
     sow: `Remove existing VCT flooring and adhesive in Rooms 101-104. Install new 12×12 VCT in selected colors per finish schedule. Include 4" rubber base.`,
     items: [
-      { code: '02 41 19.19 0260', desc: 'Selective Demolition, Flooring, VCT Removal', qty: '2,400 SF', confidence: 96, source: 'Scope: "Remove existing VCT flooring"' },
-      { code: '09 65 13.33 0200', desc: 'Resilient Flooring, VCT, 12×12', qty: '2,400 SF', confidence: 94, source: 'Scope: "Install new 12×12 VCT"' },
-      { code: '09 65 13.33 1200', desc: 'Rubber Base, 4", Straight', qty: '480 LF', confidence: 91, source: 'Scope: "Include 4" rubber base"' }
+      { code: '02 41 19.19 0260', desc: 'Selective Demolition, Flooring, VCT Removal', qty: '2,400 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 96, source: 'Scope: "Remove existing VCT flooring"' },
+      { code: '09 65 13.33 0200', desc: 'Resilient Flooring, VCT, 12×12', qty: '2,400 SF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 94, source: 'Scope: "Install new 12×12 VCT"' },
+      { code: '09 65 13.33 1200', desc: 'Rubber Base, 4", Straight', qty: '480 LF', multiplier: '1.15', multiplierNote: 'NYC Location Factor', confidence: 91, source: 'Scope: "Include 4" rubber base"' }
     ]
   },
   {
     name: 'Electrical Upgrade',
     sow: `Install new 20A duplex receptacles at 8 locations in Lab 302. Provide new 12 AWG THHN/THWN-2 in 3/4" EMT conduit from existing panel LP-3. Include GFCI protection where required per NEC.`,
     items: [
-      { code: '26 05 33.16 0200', desc: 'Raceways, EMT, 3/4"', qty: '320 LF', confidence: 93, source: 'Scope: "3/4" EMT conduit"' },
-      { code: '26 05 19.30 0600', desc: 'Wire, Copper, THHN, #12 AWG', qty: '960 LF', confidence: 91, source: 'Scope: "12 AWG THHN" (3-wire circuit)' },
-      { code: '26 27 26.11 0200', desc: 'Receptacles, Duplex, 20A, 125V', qty: '8 EA', confidence: 97, source: 'Scope: "20A duplex receptacles at 8 locations"' },
-      { code: '26 27 26.13 0200', desc: 'GFCI Receptacles, 20A', qty: '4 EA', confidence: 88, source: 'NEC requirement near sinks' }
+      { code: '26 05 33.16 0200', desc: 'Raceways, EMT, 3/4"', qty: '320 LF', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 93, source: 'Scope: "3/4" EMT conduit"' },
+      { code: '26 05 19.30 0600', desc: 'Wire, Copper, THHN, #12 AWG', qty: '960 LF', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 91, source: 'Scope: "12 AWG THHN" (3-wire circuit)' },
+      { code: '26 27 26.11 0200', desc: 'Receptacles, Duplex, 20A, 125V', qty: '8 EA', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 97, source: 'Scope: "20A duplex receptacles at 8 locations"' },
+      { code: '26 27 26.13 0200', desc: 'GFCI Receptacles, 20A', qty: '4 EA', multiplier: '1.25', multiplierNote: 'Lab/Healthcare Premium', confidence: 88, source: 'NEC requirement near sinks' }
     ]
   },
   {
     name: 'Restroom Renovation',
     sow: `Renovate existing restroom R-205. Remove existing toilet, sink, and partitions. Install new ADA-compliant water closet with grab bars, new wall-hung lavatory, and solid plastic toilet partitions.`,
     items: [
-      { code: '02 41 19.13 0400', desc: 'Demolition, Plumbing Fixtures', qty: '3 EA', confidence: 95, source: 'Scope: "Remove existing toilet, sink"' },
-      { code: '22 42 13.13 0200', desc: 'Water Closets, ADA, Floor-Mounted', qty: '1 EA', confidence: 96, source: 'Scope: "ADA-compliant water closet"' },
-      { code: '10 28 13.13 0200', desc: 'Grab Bars, 1-1/4" Diameter', qty: '2 EA', confidence: 94, source: 'Scope: "with grab bars"' },
-      { code: '22 42 16.13 0200', desc: 'Lavatories, Wall-Hung', qty: '1 EA', confidence: 95, source: 'Scope: "wall-hung lavatory"' },
-      { code: '10 21 13.23 0200', desc: 'Toilet Partitions, Solid Plastic', qty: '1 EA', confidence: 92, source: 'Scope: "solid plastic toilet partitions"' }
+      { code: '02 41 19.13 0400', desc: 'Demolition, Plumbing Fixtures', qty: '3 EA', multiplier: '1.10', multiplierNote: 'Small Job Factor', confidence: 95, source: 'Scope: "Remove existing toilet, sink"' },
+      { code: '22 42 13.13 0200', desc: 'Water Closets, ADA, Floor-Mounted', qty: '1 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 96, source: 'Scope: "ADA-compliant water closet"' },
+      { code: '10 28 13.13 0200', desc: 'Grab Bars, 1-1/4" Diameter', qty: '2 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 94, source: 'Scope: "with grab bars"' },
+      { code: '22 42 16.13 0200', desc: 'Lavatories, Wall-Hung', qty: '1 EA', multiplier: '1.20', multiplierNote: 'ADA + Small Job', confidence: 95, source: 'Scope: "wall-hung lavatory"' },
+      { code: '10 21 13.23 0200', desc: 'Toilet Partitions, Solid Plastic', qty: '1 EA', multiplier: '1.10', multiplierNote: 'Small Job Factor', confidence: 92, source: 'Scope: "solid plastic toilet partitions"' }
     ]
   }
 ];
@@ -138,6 +138,10 @@ async function runDemo() {
     el.innerHTML = `
       <div class="demo-line-code">${item.code}</div>
       <div class="demo-line-desc">${item.desc} — ${item.qty}</div>
+      <div class="demo-line-multiplier">
+        <span class="multiplier-badge">×${item.multiplier}</span>
+        <span class="multiplier-note">${item.multiplierNote}</span>
+      </div>
       <div class="demo-line-meta">
         <span class="demo-line-confidence">✓ ${item.confidence}% confidence</span>
         <span class="demo-line-source">${item.source}</span>

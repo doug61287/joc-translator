@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOC Translator — AI-Powered Job Order Contracting Estimation</title>
+  <meta name="description" content="Transform construction documents into JOC unit price book line items in hours, not days. AI-powered estimation for facilities teams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="url(#g1)"/><path d="M7 14l5 5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+        <span>JOC Translator</span>
+      </div>
+      <a href="#signup" class="btn btn-sm">Join Pilot Program</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">Founding Pilot Program — 5 Slots Open</div>
+      <h1>Stop hand-matching line items.<br>Let AI translate your JOC estimates.</h1>
+      <p class="hero-sub">Upload your project documents. Get back unit price book line items mapped, quantified, and audit-ready — in hours instead of days.</p>
+      <div class="hero-cta">
+        <a href="#signup" class="btn btn-lg">Join the Pilot Program</a>
+        <a href="#demo" class="btn btn-ghost btn-lg">See It In Action</a>
+      </div>
+      <p class="hero-note">Built for facilities teams running JOC programs on RS Means, Gordian, and custom UPBs.</p>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section fade-in" id="problem">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2>JOC estimation is stuck in the past</h2>
+      <p class="section-sub">Every JOC project starts the same way: an estimator sits down with a scope of work, opens the unit price book, and begins the tedious process of matching line items by hand.</p>
+      <div class="pain-grid">
+        <div class="pain-card fade-in">
+          <div class="pain-icon">⏱️</div>
+          <h3>Days per estimate</h3>
+          <p>A single renovation project can take 2–5 days to estimate. Your backlog keeps growing.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <div class="pain-icon">🔍</div>
+          <h3>Missed scope items</h3>
+          <p>Manual translation means missed line items, underpriced proposals, and change orders that eat your margins.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <div class="pain-icon">📋</div>
+          <h3>Audit headaches</h3>
+          <p>When the IG comes knocking, can you trace every line item back to the scope? Most teams can't — not quickly.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <div class="pain-icon">👷</div>
+          <h3>Estimator bottleneck</h3>
+          <p>Your best estimators are buried in spreadsheets. You can't scale JOC volume without hiring more bodies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="section section-dark fade-in" id="solution">
+    <div class="container">
+      <div class="section-label">The Solution</div>
+      <h2>AI that speaks JOC fluently</h2>
+      <p class="section-sub">JOC Translator reads your construction documents the way your best estimator would — then maps every scope item to the right UPB line item, automatically.</p>
+      <div class="solution-grid">
+        <div class="solution-card fade-in">
+          <h3>Understands construction documents</h3>
+          <p>Powered by BluePrint AI, it reads drawings, specs, and scopes of work — not just keywords, but actual construction intent.</p>
+        </div>
+        <div class="solution-card fade-in">
+          <h3>Maps to your UPB</h3>
+          <p>Whether you're on RS Means, Gordian, or a custom unit price book, JOC Translator maps to your specific line items and applies your coefficients.</p>
+        </div>
+        <div class="solution-card fade-in">
+          <h3>Audit-ready output</h3>
+          <p>Every line item traces back to the source document. Full documentation trail for IG reviews and contract compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="section-label">See It In Action</div>
+      <h2>From scope of work to UPB line items</h2>
+      <p class="section-sub">Watch JOC Translator read a real scope snippet and map it to unit price book line items — with quantities, confidence scores, and full traceability.</p>
+      <div class="demo-container">
+        <div class="demo-panel demo-input">
+          <div class="demo-panel-header">
+            <span class="demo-dot red"></span>
+            <span class="demo-dot yellow"></span>
+            <span class="demo-dot green"></span>
+            <span class="demo-panel-title">Scope of Work</span>
+          </div>
+          <div class="demo-panel-body">
+            <p class="demo-sow" id="demo-sow"></p>
+            <div class="demo-cursor" id="demo-cursor">|</div>
+          </div>
+        </div>
+        <div class="demo-arrow">
+          <div class="demo-arrow-line"></div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="demo-arrow-label">AI Translation</span>
+        </div>
+        <div class="demo-panel demo-output">
+          <div class="demo-panel-header">
+            <span class="demo-dot red"></span>
+            <span class="demo-dot yellow"></span>
+            <span class="demo-dot green"></span>
+            <span class="demo-panel-title">Mapped UPB Line Items</span>
+          </div>
+          <div class="demo-panel-body" id="demo-results">
+            <div class="demo-placeholder">
+              <div class="demo-spinner"></div>
+              <span>Waiting for scope input...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-controls">
+        <button class="btn btn-sm" id="demo-run">▶ Run Demo</button>
+        <button class="btn btn-ghost btn-sm" id="demo-reset">Reset</button>
+      </div>
+      <p class="demo-scenarios" style="text-align:center;margin-top:16px;font-size:.8rem;color:var(--text2);">
+        <span style="color:var(--accent);font-weight:500;">3 demo scenarios:</span> Flooring • Electrical • Restroom — Click "Run Demo" to cycle through
+      </p>
+    </div>
+  </section>
+
+  <!-- Team of Rivals -->
+  <section class="section section-dark fade-in" id="technology">
+    <div class="container">
+      <div class="section-label">Our Technology</div>
+      <h2>Team of Rivals: why our estimates are different</h2>
+      <p class="section-sub">Every estimate goes through an adversarial multi-agent pipeline. Three AI agents check each other's work — so errors get caught before they reach your bid.</p>
+      <div class="pipeline">
+        <div class="pipeline-stage fade-in">
+          <div class="pipeline-icon planner">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v18a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v18a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Planner</h3>
+          <p>Reads your scope documents, identifies every work item, and creates a structured extraction plan. Nothing gets skipped.</p>
+        </div>
+        <div class="pipeline-connector">
+          <div class="pipeline-connector-line"></div>
+          <div class="pipeline-connector-dot"></div>
+        </div>
+        <div class="pipeline-stage fade-in">
+          <div class="pipeline-icon executor">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Executor</h3>
+          <p>Maps each scope item to UPB line items, calculates quantities, applies coefficients, and builds the estimate.</p>
+        </div>
+        <div class="pipeline-connector">
+          <div class="pipeline-connector-line"></div>
+          <div class="pipeline-connector-dot"></div>
+        </div>
+        <div class="pipeline-stage fade-in">
+          <div class="pipeline-icon critic">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><line x1="14" y1="8" x2="14" y2="14"/><line x1="14" y1="18" x2="14.01" y2="18"/></svg>
+          </div>
+          <h3>Critic</h3>
+          <p>Adversarial review agent that challenges every mapping. Catches wrong codes, bad quantities, and missing items before you ever see them.</p>
+        </div>
+      </div>
+      <div class="pipeline-stats fade-in">
+        <div class="stat">
+          <div class="stat-value">90%+</div>
+          <div class="stat-label">Internal errors intercepted before output</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3×</div>
+          <div class="stat-label">Every estimate reviewed three times automatically</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Unchecked assumptions in your final estimate</div>
+        </div>
+      </div>
+      <p class="pipeline-note">Powered by adversarial AI architecture inspired by organizational intelligence research. The same "team of rivals" approach that makes great organizations — now applied to your JOC estimates.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section fade-in" id="how">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2>Three steps. That's it.</h2>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-num">1</div>
+          <h3>Upload your documents</h3>
+          <p>Drop in your scope of work, drawings, specs, or any project document. PDF, images, CAD — we handle it.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step fade-in">
+          <div class="step-num">2</div>
+          <h3>AI translates to JOC</h3>
+          <p>Our multi-agent pipeline reads the documents, maps to your UPB, and quality-checks every line item automatically.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step fade-in">
+          <div class="step-num">3</div>
+          <h3>Review & export</h3>
+          <p>Review the mapped estimate, adjust as needed, and export to Excel or directly into your JOC management system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section-dark fade-in" id="benefits">
+    <div class="container">
+      <div class="section-label">Why Teams Switch</div>
+      <h2>Built for how JOC actually works</h2>
+      <div class="benefits-grid">
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>80% faster estimates</h3>
+          <p>What took days now takes hours. Process more task orders without adding headcount.</p>
+        </div>
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Fewer missed items</h3>
+          <p>AI catches scope items human estimators overlook. Fewer change orders, better margins.</p>
+        </div>
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Audit-ready docs</h3>
+          <p>Full traceability from scope to line item. Be ready when the inspector general calls.</p>
+        </div>
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Scale without hiring</h3>
+          <p>Handle more JOC volume with your existing team. Let estimators focus on judgment, not data entry.</p>
+        </div>
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Your UPB, your way</h3>
+          <p>Works with RS Means, Gordian, and custom unit price books. Applies your coefficients and multipliers.</p>
+        </div>
+        <div class="benefit fade-in">
+          <div class="benefit-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Secure & compliant</h3>
+          <p>Your documents stay private. Built with government and institutional security requirements in mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilot Program -->
+  <section class="section fade-in" id="pilot">
+    <div class="container">
+      <div class="section-label">Founding Pilot Program</div>
+      <h2>Be one of the first five teams</h2>
+      <p class="section-sub">We're not hiding behind placeholder testimonials. We're building this with real JOC teams, on real projects.</p>
+      <div class="pilot-grid">
+        <div class="pilot-card pilot-you-get">
+          <h3>What you get</h3>
+          <ul>
+            <li><span class="check">✓</span> Free pilot on one real task order — your project, your UPB</li>
+            <li><span class="check">✓</span> Dedicated onboarding with our team</li>
+            <li><span class="check">✓</span> Custom UPB configuration (RS Means, Gordian, or yours)</li>
+            <li><span class="check">✓</span> Priority access and founding-member pricing when we launch</li>
+            <li><span class="check">✓</span> Direct line to the development team</li>
+          </ul>
+        </div>
+        <div class="pilot-card pilot-we-get">
+          <h3>What we get</h3>
+          <ul>
+            <li><span class="check">✓</span> Your honest feedback on accuracy and workflow</li>
+            <li><span class="check">✓</span> Real-world data to make the product better</li>
+            <li><span class="check">✓</span> Understanding of how your team actually estimates</li>
+            <li><span class="check">✓</span> A chance to build the tool JOC teams actually need</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pilot-slots">
+        <div class="slots-bar">
+          <div class="slots-filled" style="width: 0%"></div>
+        </div>
+        <p><strong>5 pilot slots available</strong> — accepting applications from JOC program managers and estimating teams</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signup -->
+  <section class="section section-dark" id="signup">
+    <div class="container signup-container">
+      <h2>Apply for the pilot program</h2>
+      <p class="section-sub">Tell us about your JOC program and we'll reach out to see if it's a good fit.</p>
+      <form id="signup-form" class="signup-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+        </div>
+        <input type="text" name="company" placeholder="Organization (e.g., Baltimore City DPW)" required>
+        <button type="submit" class="btn btn-lg btn-full">Apply for Pilot Program</button>
+        <p class="form-note">No credit card required. We'll reach out within 48 hours.</p>
+      </form>
+      <div id="form-success" class="form-success" style="display:none">
+        <div class="success-icon">✓</div>
+        <h3>Application received!</h3>
+        <p>We'll reach out within 48 hours to discuss your JOC program and schedule your pilot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="url(#g2)"/><path d="M7 14l5 5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+        <span>JOC Translator</span>
+      </div>
+      <p class="footer-note">Built by a construction professional who got tired of hand-matching line items.</p>
+      <p class="footer-sub">Powered by BluePrint AI · Built for JOC professionals</p>
+      <p class="footer-copy">&copy; 2026 JOC Translator. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
